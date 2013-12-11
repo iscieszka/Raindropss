@@ -5,7 +5,7 @@ class Raindrop {//creates raindrop class
 
   Raindrop() {
     loc=new PVector(random(width), 0);//inputs the starting location of the raindrop
-    vel=new PVector(0, random(1, 5));//inputs the velocity of the raindrop
+    vel=new PVector(0, random(2, 3));//inputs the velocity of the raindrop
     d=5;//diameter of raindrop
     colorMode(HSB, 360, 100, 100);
   }
