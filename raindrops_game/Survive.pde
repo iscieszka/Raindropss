@@ -4,10 +4,10 @@ class Survive {//creates Survive class
   Survive(int s) {
 
     if (s==1) {
-      life=10;
+      life=10;//lives in suvival mode
     }
     if (s==2) {
-      life=0;
+      life=0;//lives in sudden death
     }
   }
   void go(Raindrop rain) {
@@ -21,9 +21,9 @@ class Survive {//creates Survive class
     }
   }
   void display() {
-    
-      text("lives "+life, width-width/8, 20);// displays remaining lives at corner of screen
- 
+    textAlign(CORNER);
+    fill(221, 100, 100);
+    text("lives "+life, width-width/8, 20);// displays remaining lives at corner of screen
   }
 }
 
