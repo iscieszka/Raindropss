@@ -1,14 +1,8 @@
 class Survive {//creates Survive class
   int life;
 
-  Survive(int s) {
-
-    if (s==1) {
-      life=10;
-    }
-    if (s==2) {
-      life=0;
-    }
+  Survive() {
+    life=10;
   }
   void go(Raindrop rain) {
     /* the fallowing code moves the raindrop away from the screen when it falls
@@ -21,9 +15,7 @@ class Survive {//creates Survive class
     }
   }
   void display() {
-    
-      text("lives "+life, width-width/8, 20);// displays remaining lives at corner of screen
- 
+    text("lives "+life, width-width/8, 20);// displays remaining lives at corner of screen
   }
 }
 

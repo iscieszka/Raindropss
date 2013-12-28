@@ -4,6 +4,7 @@ Survive s;
 Raindrop[] rain= new Raindrop[10000]; // creates array of raindrops
 Catcher c;
 int mode;
+
 boolean survival, suddendeath, freemode;
 void setup() {
   size(500, 500);
@@ -14,25 +15,14 @@ void setup() {
   freemode=false;//free mode (needs work)
   t=new Timer();//define timer
   c=new Catcher(); //define catcher
+  s= new Survive(); //define survival mode(will be important later on as i work on game)
   for (int i=0;i<rain.length;i++) {
     rain[i]=new Raindrop(); //define each raindrop
   }
 }
 void draw() {
   background(185, 100, 100);
-  s= new Survive(mode); //define survival mode(will be important later on as i work on game)
-  if (survival==true) {
-    mode=1;
-    s.display(); //shows lives left
-  }
-  if (suddendeath=true) {
-    mode=2;
-    s.display(); //shows lives left
-  }
-  if (freemode==true) {
-    text(millis()/1000, width/2, 20);
-  }
-
+  s.display(); //shows lives left
   c.display(); //displays catcher
   t.count(); //counts the time and adds new raindrops after a certain interval
   for (int i=0;i<index;i++) {
@@ -42,3 +32,4 @@ void draw() {
     s.go(rain[i]);//checks lives for survival mode}
   }
 }
+
