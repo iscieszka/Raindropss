@@ -24,10 +24,13 @@ void setup() {
 void draw() {
   colorMode(HSB, 360, 100, 100);
   background(185, 100, 100);
-  screen.displayStart();
-  screen.startWork();
+  if (start==1) {
+    screen.displayStart();
+    screen.startWork();
+  }
   if (start==2) {
-    s= new Survive(mode); //define survival mode(will be important later on as i work on game)
+   s= new Survive(1); //define survival mode(will be important later on as i work on game)
+    screen.choose();
     if (survival==true) {
       mode=1;
       s.display(); //shows lives left
@@ -39,6 +42,8 @@ void draw() {
     if (freemode==true) {
       text(millis()/1000, width/2, 20);
     }
+     
+
 
     c.display(); //displays catcher
     t.count(); //counts the time and adds new raindrops after a certain interval

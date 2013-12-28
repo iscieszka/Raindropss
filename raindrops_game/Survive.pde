@@ -1,6 +1,5 @@
 class Survive {//creates Survive class
   int life;
-
   Survive(int s) {
 
     if (s==1) {
