@@ -1,4 +1,5 @@
 int index ;
+int life;
 Screen screen;
 Timer t;
 Survive s;
@@ -8,6 +9,7 @@ int mode;
 int start;
 boolean survival, suddendeath, freemode;
 void setup() {
+  s= new Survive(); //define survival mode(will be important later on as i work on game)
   size(500, 750);
   index=1;
   start=1;
@@ -29,20 +31,21 @@ void draw() {
     screen.startWork();
   }
   if (start==2) {
-   s= new Survive(1); //define survival mode(will be important later on as i work on game)
     screen.choose();
     if (survival==true) {
-      mode=1;
+      life=10;
       s.display(); //shows lives left
     }
-    if (suddendeath=true) {
-      mode=2;
+    if (suddendeath==true) {
+      textSize(30);
+      text("SUDDEN DEATH", width/2, height/2-50);
+      life=1;
       s.display(); //shows lives left
     }
     if (freemode==true) {
       text(millis()/1000, width/2, 20);
     }
-     
+
 
 
     c.display(); //displays catcher

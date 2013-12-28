@@ -11,6 +11,7 @@ class Catcher { //creates catcher class
     fill(221,100,100);
     loc= new PVector(mouseX, height-height/20);// constrains the catcher to a certain height and the x to the mouse position
     ellipse(loc.x, loc.y, d, d);// creates the ellipse that is the catcher
+    textSize(14);
     text("score "+score,0+width/30,20);//shows score in corner of screen
   }
   void hit(Raindrop rain) {

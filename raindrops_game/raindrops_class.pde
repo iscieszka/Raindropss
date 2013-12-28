@@ -11,10 +11,17 @@ class Raindrop {//creates raindrop class
   }
 
   void display() {//displays raindrop
-    fill(200, 100, 100);
+    if (suddendeath==true) {
+      fill(360, 100, 100);
+    }
+    else {
+      fill(200, 100, 100);
+    }
+
     ellipse(loc.x, loc.y, d, d);
   }
   void rain() {//makes the raindrops fall
     loc.add(vel);
   }
 }
+
