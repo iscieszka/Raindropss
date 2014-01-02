@@ -14,9 +14,14 @@ class Survive {//creates Survive class
   }
   void display() {
     textAlign(CORNER);
-    fill(221, 100, 100);
-    textSize(14);
-    text("lives "+life, width-width/8, 20);// displays remaining lives at corner of screen
+    if (life<4) {
+      fill(360, 100, 100);//when lives are below three changes the color of them to red
+    }
+    else {
+      fill(120, 100, 100);
+    }
+    textSize(20);
+    text("lives "+life, width-width/5, 20);// displays remaining lives at corner of screen
   }
 }
 
